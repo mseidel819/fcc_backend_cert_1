@@ -37,10 +37,8 @@ app.get("/api/:date", (req, res) => {
   let timeInMill;
 
   if (new Date(+req.params.date).getTime()) {
-    console.log("milli", new Date(+req.params.date).getTime());
     timeInMill = new Date(+req.params.date).getTime();
   } else if (new Date(req.params.date).getTime()) {
-    console.log("milli", new Date(req.params.date).getTime());
     timeInMill = new Date(req.params.date).getTime();
   }
 
